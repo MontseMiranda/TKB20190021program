@@ -1,0 +1,131 @@
+---
+title: "MWC GROUP 5 PAX"
+author: "BEYRAND"
+date: '23th to 28th, February 2020  '
+output:
+ 
+  html_document:
+    css: FORMATO.css
+    highlight: textmate
+    theme: cosmo
+    toc: yes
+    toc_float: yes
+---
+
+<script> 
+    $(document).ready(function() { 
+    $head = $('#header'); 
+    $head.prepend('<A href = https://www.cuttingedge-events.com><img src ="LOGO.png" width="150" vspace="50" align="right"></A>') 
+    }); 
+</script> 
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE)
+```
+
+
+```{r libraries}
+library(readxl)
+library(dplyr)
+library(knitr)
+library(timevis)
+
+```
+
+## MAP
+
+<iframe src="https://www.google.com/maps/d/embed?mid=1t0pyKMFFMwuO3ybLpGjzBmNBgyd5KLpB&hl=es" width="640" height="480"></iframe>
+
+## ACCOMMODATION
+
+For accommodation in Barcelona, we recommend the hotel NN Gran Via. This is a great property located at the city centre, just few steps from main attractions of the city. Also this hotel offers very good value for money and it is the closer option to Fira Gran Via, the venue of The Mobile World Congress. 
+
+### _**Main Hotel: NN Gran Via**_
+
+<iframe src="Gran Via/Gran Via.html" frameborder="0" width="100%" height="1800" scrolling="no"></iframe>
+
+### **Alternative Hotels** {.tabset .tabset-fade}
+
+#### Hotel Avenida Palace 
+
+<iframe src="Avenida Palace/Avenida palace.html" frameborder="0" width="100%" height="1800" scrolling="no"></iframe>
+
+
+#### Hotel Ayre Rosello
+
+<iframe src="Ayre Rosellon/Ayre Rosellon.html" frameborder="0" width="100%" height="1800" scrolling="no"></iframe>
+
+#### Hotel Ayre Caspe
+
+<iframe src="Ayre Caspe/Ayre Caspe.html" frameborder="0" width="100%" height="1800" scrolling="no"></iframe>
+
+#### Hotel Catalonia Plaça Catalunya
+
+<iframe src="Catalonia Plaza Catalunya/cataloniaplazacat.html" frameborder="0" width="100%" height="1800" scrolling="no"></iframe>
+
+#### Hotel Seventy 
+
+<iframe src="Seventy/Seventy.html" frameborder="0" width="100%" height="1800" scrolling="no"></iframe>
+
+
+*****
+
+## Budget
+
+<iframe src="https://tkb20190021budget.netlify.com/"  frameborder="0" width="100%" height="1600" scrolling="no"></iframe>
+
+<br>
+
+## Terms & Conditions
+
+  * Rates valid for 2020.
+  
+  * Net rates for BEYRAN CORPORATION
+  
+  * For a group of minimum 5 pax.
+  
+  * Cutting Edge Events management fee including in the detailed rates
+  
+  * VAT included. 
+  
+  * No reservation has been done. Availability upon request.
+
+## Amaze your clients!!
+
+<div class="client_offer">
+
+<p>Didn't you just love our presentation ? Our first goal here at _**Cutting Edge Events**_ is to help you **win** this business. You will most likely now collate the information contained in this website and make your own presentation
+to show your client<br>
+
+<p>Why not leverage our technology, and present your client with the same format ? As a **totally free service**, we offer you the possibility of doing the work for you</p>
+
+<p> We will: 
+  <ul>
+    * Follow your instructions to add anything you want to be in your presentation, and delete anything that you don't consider relevant
+    * Include your logo and company details, and remove all our company details
+    * We can even change some colors to mimic your corporate identity
+    * We will send you the new link, and it will look as if it was your work
+  </ul>
+</p>
+</div>
+
+<style>
+
+.client_offer{
+background-color: blue;
+color: white;
+padding: 10px;
+border: 1px solid black;
+margin-left: 25px;
+border-radius: 5px;
+font-style: italic;
+}
+</style>
+
+******************
+
+
+
+

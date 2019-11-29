@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+  <style>
+    :root {
+  /* Set fade in duration */
+  --fade-time: 0.5s;
+}
+
+body {
+  margin: 5px;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
+  font-weight: 360;
+  line-height: 130%;
+  
+}
+
+#stars{
+  font-weight: bold;
+  font-size: large;
+}
+
+.checked{
+  color:orange;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  border: #fff solid 1px;
+ 
+}
+
+.main-img img,
+.imgs img {
+  width: 100%;
+}
+
+.imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+.imgs img {
+  cursor: pointer;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn var(--fade-time) ease-in 1 forwards;
+}
+
+/* Media Queries */
+@media(max-width: 600px) {
+  .imgs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+  <div class="activities" style="margin: auto; padding: 0px;"> 
+
+       
+        <span id="stars">Catalonia Plaça Catalunya</span>         <!--estrellas del hotel-->
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star  "></span>    
+        <span><sup></sup></span>      <!-- si el hotel es gran lujo, ..., escribir entre <sub></sub>-->                                            <!--insertar titulo-->
+    <p>In barcelona's downtown, very close to the Plaza Catalunya and Las Ramblas, the hotel Catalonia Plaza Catalunya is located, that offers a wide range of services and amenities in a wonderful contemporary setting.<p> 
+
+    <p>The entrance and facade of the original building have been maintained and restored. An impressive marble staircase leads to the first floor, where there are magnificent doors made of Cuban mahogany (a type of wood that is no longer available), a perfectly conserved coffered ceiling and dome.<p> 
+
+    <p>The hotel Catalonia Plaza Catalunya also has 4 function rooms, which are ideal for organising events and celebrations, captivating your guests, thanks to an unbeatable architectural setting in the urban and commercial centre of Barcelona.<p>  
+
+                     <!--insertar el texto-->
+    <hr>
+  </div>
+	<div class="container">
+    <div class="main-img">
+      <img src="catalonia1.jpg" id="current">
+    </div>
+
+    <div class="imgs">                                          <!--insertar las fotos-->
+      <img src="catalonia2.jpg">
+      <img src="catalonia3.jpg">
+      <img src="catalonia4.jpg">
+      <img src="catalonia5.jpg">
+    </div>
+  </div>
+  <hr>
+  
+  <section class="container">
+
+<div class ="one" style="float: left;
+    padding: 10px; background-color: rgba(238, 238, 238, 0.6)">
+<p><i class="fa fa-map-o" style="font-size:20px;color:orange;"></i>   <!--insertar la info relevante a los iconos-->
+<span style="margin: 0 20px; font-size:14px"><b> Location:</b> Plaza Catalunya</p></span>
+<p><i class="fa fa-h-square" style="font-size:20px;color:orange;"></i> 
+<span style="margin: 0 22px; font-size:14px"><b> Category:</b> 4 stars</p></span>
+<p><i class="fa fa-cutlery" style="font-size:20px;color:orange;"></i> 
+<span style="margin: 0 22px; font-size:14px"><b> Restaurants:</b> 1 Restaurant and 1 bar</p></span>
+<p><i class="fa fa-wifi" style="font-size:20px;color:orange;"></i> 
+<span style="margin: 0 20px; font-size:14px"><b> Wifi:</b> Available in rooms and common areas</p></span>
+<p><i class="fa fa-users" style="font-size:20px;color:orange;"></i> 
+<span style="margin: 0 14px"><b>Nr. Rooms:</b> 150 rooms</p></span>
+
+</div>
+
+<div class ="two" style="float: right;
+    padding: 10px; background-color: rgba(238, 238, 238, 0.6); ">
+<p><i class="fa fa-wheelchair" style="font-size:20px;color:orange;"></i>    <!--insertar la info relevante a los iconos-->
+<span style="margin: 0 21px, font-size:14px"><b> Handicapped facilities: </b>Yes</p></span>
+<p><i class="fa fa-shower" style="font-size:20px;color:orange;"></i> 
+<span style="margin: 0 20px; font-size:14px"><b> Swimmingpool:</b> Yes</p></span>
+<p><i class="fa fa-clock-o" style="font-size:20px;color:orange;"></i> 
+<span style="margin: 0 21px; font-size:14px"><b> Check in/out:</b> 3pm /noon</p></span>
+<p><i class="fa fa-coffee" style="font-size:20px;color:orange;"></i> 
+<span style="margin: 0 20px; font-size:14px"><b> Meeting rooms:</b> max 225 pax</p></span>
+</div>
+</section>
+</div> 
+	<script>
+		const current = document.querySelector('#current');
+const imgs = document.querySelector('.imgs');
+const img = document.querySelectorAll('.imgs img');
+const opacity = 0.6;
+
+// Set first img opacity
+img[0].style.opacity = opacity;
+
+imgs.addEventListener('click', imgClick);
+
+function imgClick(e) {
+  // Reset the opacity
+  img.forEach(img => (img.style.opacity = 1));
+
+  // Change current image to src of clicked image
+  current.src = e.target.src;
+
+  // Add fade in class
+  current.classList.add('fade-in');
+
+  // Remove fade-in class after .5 seconds
+  setTimeout(() => current.classList.remove('fade-in'), 500);
+
+  // Change the opacity to opacity var
+  e.target.style.opacity = opacity;
+}
+
+	</script>
+</body>
+</html>
